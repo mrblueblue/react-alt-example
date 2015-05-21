@@ -20,6 +20,15 @@ class Locations extends React.component {
   }
 
   render() {
+    
+    if (!this.state.locations.length) {
+      return (
+        <div>
+          <img src="/my-cool-spinner.gif" />
+        </div>
+      )
+    }
+
     return (
       <ul>
         {this.state.locations.map((location) => {
