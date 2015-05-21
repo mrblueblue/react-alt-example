@@ -7,4 +7,3 @@ class LocationActions {
 }
 
 module.exports = alt.createActions(LocationActions);
-
