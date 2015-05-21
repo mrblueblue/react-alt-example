@@ -1,6 +1,6 @@
-var alt = require('../alt');
-var LocationActions = require('../actions/LocationActions');
-var FavoritesStore = require('./FavoritesStore');
+import { alt } from '../alt';
+import LocationActions from '../actions/LocationActions';
+import FavoritesStore from './FavoritesStore';
 
 class LocationStore {
 
@@ -62,4 +62,4 @@ class LocationStore {
   }
 }
 
-module.exports = alt.createStore(LocationStore, 'LocationStore');
+export default alt.createStore(LocationStore, 'LocationStore');

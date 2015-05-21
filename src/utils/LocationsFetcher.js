@@ -1,4 +1,4 @@
-var mockData = [
+const mockData = [
   { id: 0, name: 'Abu Dhabi' },
   { id: 1, name: 'Berlin' },
   { id: 2, name: 'Bogota' },
@@ -14,7 +14,7 @@ var mockData = [
   { id: 12, name: 'San Francisco' }
 ];
 
-var LocationsFetcher = {
+export const LocationsFetcher = {
   fetch: function () {
     // returning a Promise because that is what fetch does.
     return new Promise(function (resolve, reject) {
@@ -28,5 +28,3 @@ var LocationsFetcher = {
     });
   }
 };
-
-module.exports = LocationsFetcher;

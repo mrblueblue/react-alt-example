@@ -1,5 +1,5 @@
-var alt = require('../alt');
-var LocationsFetcher = require('../utils/LocationsFetcher');
+import { alt } from '../alt';
+import {LocationsFetcher} from '../utils/LocationsFetcher';
 
 class LocationActions {
 
@@ -31,4 +31,4 @@ class LocationActions {
 
 }
 
-module.exports = alt.createActions(LocationActions);
+export default alt.createActions(LocationActions);

@@ -1,26 +1,26 @@
-var React = require('react');
-var LocationStore = require('../stores/LocationStore');
-var LocationActions = require('../actions/LocationActions');
+import React from 'react';
+import LocationStore from '../stores/LocationStore';
+import LocationActions from '../actions/LocationActions';
 
-LocationActions.fetchLocations();
+export class Locations extends React.Component {
 
-var Locations = React.createClass({
-
-  getInitialState() {
-    return LocationStore.getState();
-  },
+  constructor(props) {
+    super(props);
+    this.state = LocationStore.getState();
+  }
 
   componentDidMount() {
-    LocationStore.listen(this.onChange);
-  },
+    LocationActions.fetchLocations();
+    LocationStore.listen(this.onChange.bind(this));
+  }
 
   componentWillUnmount() {
-    LocationStore.unlisten(this.onChange);
-  },
+    LocationStore.unlisten(this.onChange.bind(this));
+  }
 
   onChange(state) {
     this.setState(state);
-  },
+  }
 
   render() {
 
@@ -36,12 +36,12 @@ var Locations = React.createClass({
       <ul>
         {this.state.locations.map((location) => {
           return (
-            <li>{location.name}</li>
+            <li key={location.id}>
+              {location.name}
+            </li>
           );
         })}
       </ul>
     );
   }
-});
-
-module.exports = Locations;
+};
