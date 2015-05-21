@@ -1,7 +1,7 @@
-var React = require('react');
+import React from 'react';
 var Locations = require('./components/Locations.jsx');
 
 React.render(
   <Locations />,
-  document.body
+  document.getElementById('content')
 );
