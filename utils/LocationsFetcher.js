@@ -21,7 +21,7 @@ var LocationsFetcher = {
       // simulate an asynchronous action where data is fetched on
       // a remote server somewhere.
       setTimeout(function () {
-
+        console.log('resolved')
         // resolve with some mock data
         resolve(mockData);
       }, 250);

@@ -1,7 +1,8 @@
 var alt = require('../alt');
+var LocationsFetcher = require('../utils/LocationsFetcher');
 
 class LocationActions {
-	
+
   updateLocations(locations) {
     this.dispatch(locations);
   }
@@ -23,6 +24,11 @@ class LocationActions {
   locationsFailed(errorMessage) {
     this.dispatch(errorMessage);
   }
+
+  favoriteLocation(locationId) {
+    this.dispatch(locationId);
+  }
+
 }
 
 module.exports = alt.createActions(LocationActions);
