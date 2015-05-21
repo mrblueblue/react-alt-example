@@ -2,4 +2,7 @@
 
 A simple example built with React and Flux (alt).
 
-A work in progress
+### Dev Tools
+* Babel
+* Webpack
+* Gulp
