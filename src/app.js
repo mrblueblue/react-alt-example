@@ -1,5 +1,5 @@
 import React from 'react';
-var Locations = require('./components/Locations.jsx');
+import Locations from './components/Locations.jsx';
 
 React.render(
   <Locations />,

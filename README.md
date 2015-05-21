@@ -3,6 +3,6 @@
 A simple example built with React and Flux (alt).
 
 ### Dev Tools
-* Babel
-* Webpack
-* Gulp
+* _Transpiler_ - Babel
+* _Bundle_ - Webpack
+* _Tasks_ - Gulp

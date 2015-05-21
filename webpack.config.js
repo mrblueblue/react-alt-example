@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './src/app.js',
+  entry: ['webpack/hot/dev-server', './src/app.js'],
   output: {
     filename: 'bundle.js',
     publicPath: 'http://localhost:8090/assets'
